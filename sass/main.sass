@@ -34,7 +34,7 @@ $heders-color: #2c3949
 	background-color: #f9f9f9
 	position: relative 
 	.section-head
-		margin-bottom: 80px 
+		margin-bottom: 60px 
 		p
 			margin-top: 60px  
 			a
@@ -165,21 +165,38 @@ $heders-color: #2c3949
 		background-color: #2c3949
 
 
-.s-wrap
-	padding-bottom: 70px   
+
+	 
 	
 .s2-items
+	padding-bottom: 70px  
 	.s2_item
 		text-align: center
-		padding-bottom: 34px
-	.img-wrap
-		display: inline-block
-		height: 80px
-		width: 80px
 
+
+	.img-wrap
+		padding-bottom: 34px 
+		display: block
+		position: relative
+		&::before
+			content: ""
+			position: absolute 
+			height: 1.4px
+			background-color: $main-color
+			width: 80px 
+			
+			top: 100px
+			left: 50%
+			transform: translate(-50%, 0)
+			 
+		>span
+			display: block
+			padding-top: 40px
+			width: 150px
+			
 		img
 			max-width: 96px 
-			min-height: 80px 
+			height: 80px 
 
 
 .img-wrap
@@ -190,4 +207,21 @@ $heders-color: #2c3949
 //ALWAYS END
 @import "media"
 
+.s2-item-text
+	font-family: "RalewayBold", $helvetica
+	font-size: em(14px) 
+	text-decoration: underline 
+	color: #111 
+	line-height: 18px 
+
+
+.s2-item-container
+	text-align: center  
+
+
+.s2-item-wrap
+	display: inline-block
+	float: none 
+	padding: 0 15px 
+	width: 170px
 
