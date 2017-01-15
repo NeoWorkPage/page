@@ -1,0 +1,326 @@
+@import "bourbon"
+@import "vars.sass"
+
+
+
+body
+	font-size: 15px
+	min-width: 320px
+	position: relative
+	line-height: em(22px)
+	font-family: "RalewayRegular", sans-serif
+	overflow-x: hidden
+	color: $main-color
+	
+.hidden
+	display: none
+	
+a, a:hover, a:active, a:focus
+	color: $main-color
+	text-decoration: underline  
+
+.headers
+	font-family: "PFCentroSlabProMedium", $helvetica
+	font-weight: normal
+	color: $heders-color
+	text-transform: uppercase 
+	
+h1, h2, h3, h4, h5, h6 
+	@extend .headers
+	line-height: em(22px) 
+	font-weight: normal
+	
+h1
+	font-size: em(48px)
+
+	
+h2
+	font-size: em(30px)
+
+h3
+	font-size: em(24px) 
+	
+b, strong
+	font-family: "RalewayBold", $helvetica
+	font-weight: normal 
+
+.before
+	content: ''
+	width: 100% 
+	height: 100%
+	position: absolute 
+	left: 0
+	top: 0   
+
+
+.main-head
+	min-height: 620px
+	-webkit-background-size: cover 
+	-o-background-size: cover 
+	background-size: cover 
+	background-position:  center
+	position: relative
+	padding-bottom: 90px 
+	&::before
+		@extend .before
+		background-color: rgba(57,75,95,0.85)
+	h1
+		text-transform: none 
+	
+.top-line
+	padding: 25px 
+	min-height: 160px
+	background-image: url(../img/top_gradient.png)
+	background-repeat: repeat-x    	
+
+.logo
+	img 
+		width: 100px
+
+.ulmnu
+	list-style-type: none 
+	margin: 0
+	padding: 0
+	li
+		display: inline-block 
+
+
+
+.main-mnu
+	font-size: em(16px)
+	position: absolute
+	right: 40px
+	z-index: 2 
+	li
+		line-height: 48px
+		padding: 0 10px 
+		&.active
+			a,
+			a:hover
+				color: $main-color
+				text-decoration: underline  
+		a:hover
+				color: $main-color
+				text-decoration: underline  
+				
+	ul
+		@extend .ulmnu
+	a 
+		text-decoration: none 
+		color: #FFF 
+	
+.phone-wrap
+	position: relative  
+	.phone
+		color: #FFF
+		font-family: "RobotoBold", $helvetica
+		font-size: em(20px)
+		opacity: 0.95  
+		line-height: 48px   
+		text-align: right
+		white-space: nowrap 
+		
+	.toggle-mnu
+		display: block
+		position: absolute 
+		top: 0px
+		right: 0px 
+		
+		text-align: center
+		line-height: 48px 
+	 	
+.toggle-mnu
+  display: block
+  width: 28px
+  height: 30px
+  margin: 22px auto 0px
+  span
+    &:after, &:before
+      content: ""
+      position: absolute
+      left: 0
+      top: -9px
+    &:after
+      top: 9px
+      width: 100%
+      height: 3px
+      background-color: #fff
+      transition: all 0.3s
+      backface-visibility: hidden
+      border-radius: 2px
+    position: relative
+    display: block
+    width: 100%
+    height: 3px
+    background-color: #fff
+    transition: all 0.3s
+    backface-visibility: hidden
+    border-radius: 2px
+    &:before
+      width: 100%
+      height: 3px
+      background-color: #fff
+      transition: all 0.3s
+      backface-visibility: hidden
+      border-radius: 2px
+  &.on
+    span
+      background-color: transparent
+      &:before
+        transform: rotate(45deg) translate(5px, 5px)
+      &:after
+        transform: rotate(-45deg) translate(7px, -8px)
+    + #menu
+      opacity: 1
+      visibility: visible
+
+
+.header-wrap
+	margin-top: 40px
+	h1
+		margin-top: 120px
+		color: #FFF
+		border-bottom: 8px solid $main-color
+		display: inline-block
+		padding-bottom: 22px
+		-webkit-border-radius: 7px 
+		border-radius: 7px 
+	ul
+		@extend .ulmnu
+		margin-top: 10px 
+		li
+			display: block
+			font-family: "RalewaySemiBold", $helvetica
+			font-size: em(18px) 
+			line-height: em(30px)
+			position: relative  
+			&::before
+				content: ""
+				display: block
+				width: 6px
+				height: 12px
+				+triangle(12px,$main-color,right)
+				position: absolute
+				top: 9px
+				left: 0
+				
+				 
+
+			a
+				text-decoration: none
+				color: #FFF 
+				padding-left: 20px
+				&:hover
+					text-decoration: underline  
+
+.header-left
+	margin-bottom: 40px 
+	
+.forms
+	opacity: 0.8
+	background-color: #243343 
+	padding: 35px 35px 
+	color: #97a4b2
+	font-size: em(15px)
+	border-bottom: 4px solid #1b232c 
+	h4
+		color: #FFF 
+		font-size: em(35px) 
+		font-family:  "PFCentroSlabProMedium", $helvetica
+		text-transform: none
+		margin: 0 
+	p
+		line-height: 19px
+		margin-top: 20px  
+	label 
+		margin-top: 20px 
+		margin-bottom: 20px
+		display: block 
+		span
+			letter-spacing: 1.5px 
+			display: block
+			margin-bottom: 8px 
+			color: #778390 
+	input
+		display: block
+		width: 100%
+		border: none 
+		-webkit-box-shadow: 0 -4px #1f2a36  
+		box-shadow: 0 -4px #1f2a36  
+		background: 0 -4px #34465a 
+		height: 40px
+		text-indent: 10px
+		padding: 10px 0 
+		-webkit-transition: all .5s ease 
+		-moz-transition: all .5s ease 
+		-ms-transition: all .5s ease 
+		-o-transition: all .5s ease 
+		transition: all .5s ease 
+		color: #FFF  !important
+		font-family: "PFCentroSlabProMedium" , $helvetica
+		font-size: em(19px)  
+		&:focus 
+			-webkit-box-shadow: 0 -7px #1f2a36  
+			box-shadow: 0 -7px #1f2a36  
+			background-color: #415b78
+			border: none 
+			
+	.buttons
+		margin-top: 10px 
+		
+.button-wrap
+	text-align: center   
+
+.buttons
+	display: inline-block	
+	border: none
+	background-color: $main-color  
+	color: #111 
+	font-size: em(22px) 
+	font-family: "PFCentroSlabProBold", $helvetica 
+	padding: 12px 28px
+	border-bottom: 3px solid #b97200
+	-webkit-transition: all .5s ease
+	-moz-transition: all .5s ease
+	-ms-transition: all .5s ease
+	-o-transition: all .5s ease
+	transition: all .5s ease
+	text-decoration: none 
+	&:hover
+		background-color: #f3b85a
+		text-decoration: none 
+		color: #111
+	&:active
+		background-color: #db8c0e
+		text-decoration: none 
+		color: #111
+	&:focus
+		background-color: #db8c0e
+		text-decoration: none 
+		color: #111
+		 
+
+
+.arrow-wrap
+	@extend .button-wrap
+	position: relative 
+	z-index: 2 
+	top: 40px 
+
+.arrow-bottom
+	display: inline-block
+	width: 40px
+	height: 40px
+	background-image: url(../img/arrow_down.png)
+	cursor: pointer
+	opacity: .6 
+	-webkit-transition: all .3s ease 
+	-moz-transition: all .3s ease 
+	-ms-transition: all .3s ease 
+	-o-transition: all .3s ease 
+	transition: all .3s ease 
+	&:hover
+		opacity: 1 
+	
+	
+	

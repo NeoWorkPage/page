@@ -1,0 +1,165 @@
+@import "bourbon"
+
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px)
+	.main-mnu
+		display: none 
+		min-width: 293px
+		float: right
+		text-align: left 
+		max-width: 280px
+		background-color: rgba(35,39,54,1) 
+		position: absolute
+		top: 15px
+		right: 15px	  
+		ul
+			li
+				display: block
+				line-height: 0px 
+				padding: 0 
+			a
+				display: block
+				line-height: 48px 
+				padding: 0 20px
+				background-color: transparent
+				transition: all .5s ease
+				font-size: em(18px) 
+				
+				
+				&:hover
+					background-color: rgba(52,67,84,0.8)  
+	
+	.phone
+		padding-right: 63px 
+
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+
+	.section-content
+		.s1-bottom-triangle
+			-webkit-background-size:  cover
+			-o-background-size:  cover
+			background-size:  cover
+
+	.main-mnu
+		top: 50px
+	.header-wrap 
+		margin-top: 20px 
+		h1
+			margin-top: 20px 
+	
+	.info-item
+		padding: 0
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+	
+	/*Disable Animation on Mobile Devices*/
+	.animated
+		/*CSS transitions*/
+		-o-transition-property: none !important
+		-moz-transition-property: none !important
+		-ms-transition-property: none !important
+		-webkit-transition-property: none !important
+		transition-property: none !important
+		/*CSS transforms*/
+		-o-transform: none !important
+		-moz-transform: none !important
+		-ms-transform: none !important
+		-webkit-transform: none !important
+		transform: none !important
+		/*CSS animations*/
+		-webkit-animation: none !important
+		-moz-animation: none !important
+		-o-animation: none !important
+		-ms-animation: none !important
+		animation: none !important
+	.header-wrap 
+		h1
+			line-height: 50px 
+	
+	.main-mnu
+		margin-top: 50px
+		top: 8px
+	.info-item
+		max-width: 100%
+	
+				
+	
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+	.top-line
+		padding: 35px 0px 
+	.homesect 
+		.section-head
+			margin-bottom: 0
+			
+	.section-content 
+		.s1-bottom-triangle 
+			.tr-logo
+				margin-left: 0
+				position: relative
+	.info-item
+		max-width: 100% 
+		margin-top: 20px 
+		margin-bottom: 20px 
+		border-bottom: 1px solid #7397A9
+		p
+			border-bottom: none 
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+	.top-line
+		padding-top: 20px 
+	.phone-wrap
+		.phone
+			font-size: em(18px) 
+			line-height: 34px 
+			padding-right: 50px
+	
+	.logo
+		img
+			width: 80px  
+	.phone-wrap
+		.toggle-mnu
+			margin-top: 15px  
+			width: 34px
+			height: 40px 
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+	/**/
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+	/**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+	/**/
+	.phone-wrap
+		.toggle-mnu
+			margin-right: 20px 
+		.phone
+			padding-right: 70px
+			
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+	/**/
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+	.main-mnu
+		display: block !important
+	
