@@ -1,9 +1,29 @@
 $(function() {
 
+	
+
+	$(".section_4").waypoint(function() {
+
+		$(".section_4 .card").each(function(index) {
+			var ths = $(this);
+			setInterval(function() {
+				ths.removeClass("card-off").addClass("card-on");
+			}, 200*index);
+		});
+
+	}, {
+		offset : "20%"
+	});
+	
+
+	
+
+
 	$('.toggle-mnu').click(function() {
 		$(this).toggleClass('on');
 		$('.main-mnu').slideToggle()
 	});
+
 
 
 	//SVG Fallback
@@ -30,5 +50,7 @@ $(function() {
 		});
 		return false;
 	});
+
+
 
 });
