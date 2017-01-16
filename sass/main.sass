@@ -138,7 +138,7 @@ $heders-color: #2c3949
 	max-width: 270px 
 	line-height: em(19px) 
 	margin: 56px 0 
-	text-align: center 
+	text-align:  
 	
 	h4
 		margin-top: 0 
@@ -205,8 +205,7 @@ $heders-color: #2c3949
 		width: 100%
 		max-width: 100% 
 
-//ALWAYS END
-@import "media"
+
 
 .s2-item-text
 	font-family: "RalewayBold", $helvetica
@@ -287,3 +286,48 @@ $heders-color: #2c3949
 	img
 		width: 70px
 		margin-top: 32px 
+		
+.s_gray
+ 	background-color: #e5e5e5
+ 	&::before
+ 		background-image: url(../img/bah_3.png)
+ 	.section-bottom
+ 		background-color: #d6d6d6 
+
+
+.section-pb
+	padding-bottom: 70px
+	
+.cards
+	text-align: center
+	.card
+		width: 260px
+		display: inline-block
+		background-color: #2c3949 
+		margin: 0 12px 
+		color: #97a4b2 
+		font-size: em(15px) 
+		line-height: em(22px) 
+		padding: 54px 28px 52px
+			h4
+				color: #E5E5E5 
+		.card-icon
+			width: 120px
+			display: inline-block
+			height: 120px
+			background-color: $main-color
+			-webkit-border-radius: 10em  
+			 border-radius: 10em 
+			position: relative 
+			img
+				width: 80px
+				position: relative
+				top: 27px
+			
+
+			display: inline-block 
+		
+
+//ALWAYS END
+@import "media"
+
